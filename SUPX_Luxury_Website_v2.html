@@ -1,0 +1,54 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>SUPX Luxury</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,Arial}
+html{scroll-behavior:smooth}body{background:#050816;color:#fff;overflow-x:hidden}
+.bg{position:fixed;inset:0;background:
+radial-gradient(circle at 20% 20%,#00ff9940,transparent 25%),
+radial-gradient(circle at 80% 30%,#00bfff30,transparent 20%),
+radial-gradient(circle at 50% 80%,#7b61ff30,transparent 20%),#050816;
+filter:saturate(120%);animation:move 18s ease-in-out infinite alternate;z-index:-2}
+@keyframes move{to{transform:scale(1.15) rotate(6deg)}}
+nav{position:fixed;top:18px;left:50%;transform:translateX(-50%);width:92%;display:flex;justify-content:space-between;align-items:center;padding:16px 24px;background:#ffffff10;border:1px solid #ffffff22;border-radius:20px;backdrop-filter:blur(18px);z-index:9}
+nav a{color:#fff;text-decoration:none;margin-left:20px}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:20px}
+h1{font-size:min(8vw,80px);background:linear-gradient(90deg,#fff,#00ff99);-webkit-background-clip:text;color:transparent}
+p{max-width:760px;margin:22px auto;color:#d8d8d8;line-height:1.7}
+.btn{display:inline-block;padding:16px 30px;border-radius:999px;text-decoration:none;font-weight:700;margin:8px}
+.primary{background:#00ff99;color:#000;box-shadow:0 0 35px #00ff99}
+.secondary{border:1px solid #00ff99;color:#fff}
+.sec{padding:90px 8%}.title{text-align:center;font-size:40px;margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.card{background:#ffffff10;border:1px solid #ffffff22;border-radius:22px;padding:26px;backdrop-filter:blur(16px);transition:.35s}
+.card:hover{transform:translateY(-10px) scale(1.02)}
+.status,.faq{max-width:1000px;margin:auto}
+.item{margin:14px 0;padding:20px;background:#ffffff10;border-radius:16px}
+details summary{cursor:pointer;font-weight:bold}
+footer{padding:40px;text-align:center;color:#bbb}
+.wa{position:fixed;right:20px;bottom:20px;background:#25d366;color:#fff;border-radius:50%;padding:18px;text-decoration:none;font-size:24px}
+.reveal{opacity:0;transform:translateY(40px);transition:1s}.show{opacity:1;transform:none}
+#clock{color:#00ff99}
+</style></head><body>
+<div class='bg'></div>
+<nav><b style='color:#00ff99'>SUPX</b><div><a href=#services>Services</a><a href=#status>Status</a><a href=#faq>FAQ</a></div></nav>
+<section class='hero'><div class='reveal'><h1>Luxury Support Platform</h1><p>Premium customer support experience with elegant animations and a futuristic design.</p><a class='btn primary' href='https://wa.me/212623709705
+
+
+
+'>WhatsApp</a><a class='btn secondary' href='#services'>Explore</a><p id='clock'></p></div></section>
+<section id='services' class='sec'><h2 class='title reveal'>Services</h2><div class='grid'>
+<div class='card reveal'><h3>24/7 Support</h3><p>Always available.</p></div>
+<div class='card reveal'><h3>Live Status</h3><p>Operational dashboard.</p></div>
+<div class='card reveal'><h3>Secure</h3><p>Protected communications.</p></div>
+<div class='card reveal'><h3>Fast Response</h3><p>Optimized workflow.</p></div></div></section>
+<section id='status' class='sec status reveal'><h2 class='title'>🟢 All Systems Operational</h2><div class='card'><p>Network: Online<br>Support: Available<br>Uptime: 99.99%</p></div></section>
+<section id='faq' class='sec faq reveal'><h2 class='title'>FAQ</h2>
+<div class='item'><details><summary>When are you open?</summary><p>24 hours a day, 7 days a week.</p></details></div>
+<div class='item'><details><summary>How do I contact support?</summary><p>Use the WhatsApp button.</p></details></div>
+</section>
+<footer>©2026 SUPX</footer>
+<a class='wa' href='https://wa.me/YOURNUMBER'>💬</a>
+<script>
+document.querySelectorAll('.reveal').forEach(el=>new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('show'))).observe(el));
+setInterval(()=>clock.textContent=new Date().toLocaleString(),1000);
+</script></body></html>
